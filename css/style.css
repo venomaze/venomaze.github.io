@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #0e0e0e;
+}
+
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  animation: fill-animation 1s ease forwards 1.8s;
+  fill: transparent;
+}
+
+#logo path:nth-child(1) {
+  stroke-dasharray: 2980;
+  stroke-dashoffset: 2980;
+  animation: stroke-animation 2s ease forwards;
+}
+
+#logo path:nth-child(2) {
+  stroke-dasharray: 979;
+  stroke-dashoffset: 979;
+  animation: stroke-animation 2s ease forwards 0.2s;
+}
+
+@keyframes stroke-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-animation {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1281px) {
+  #logo {
+    width: 30vw;
+  }
+}
+
+/* Laptops, Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #logo {
+    width: 30vw;
+  }
+}
+
+/* Tablets, Ipads (portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #logo {
+    width: 40vw;
+  }
+}
+
+/* Tablets, Ipads (landscape) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #logo {
+    width: 30vw;
+  }
+}
+
+/* Low Resolution Tablets, Mobiles (Landscape) */
+@media (min-width: 481px) and (max-width: 767px) {
+  #logo {
+    width: 40vw;
+  }
+}
+
+/* Most of the Smartphones Mobiles (Portrait) */
+@media (min-width: 320px) and (max-width: 480px) {
+  #logo {
+    width: 50vw;
+  }
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .icons {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+footer .icon {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 16px;
+  transition: 0.4s;
+  opacity: 0;
+}
+
+footer .icon:first-child {
+  margin-left: 0;
+}
+
+footer .icon:hover {
+  color: #fff;
+}
+
+footer .icon:nth-child(1) {
+  animation: fade-in-animation 1s ease forwards 1s;
+}
+
+footer .icon:nth-child(2) {
+  animation: fade-in-animation 1s ease forwards 1.3s;
+}
+
+footer .icon:nth-child(3) {
+  animation: fade-in-animation 1s ease forwards 1.6s;
+}
+
+footer .icon:nth-child(4) {
+  animation: fade-in-animation 1s ease forwards 1.9s;
+}
+
+footer .icon:nth-child(5) {
+  animation: fade-in-animation 1s ease forwards 2.2s;
+}
+
+footer p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: fade-in-animation 1s ease forwards 0.7s;
+}
+
+footer p i {
+  color: #f44336;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+footer p span {
+  font-weight: 700;
+  color: #fff;
+}
+
+@keyframes fade-in-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
